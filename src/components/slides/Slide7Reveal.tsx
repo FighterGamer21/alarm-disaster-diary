@@ -1,21 +1,25 @@
 import SlideLayout from "../SlideLayout";
-import spotlightImg from "@/assets/slide7-spotlight.jpg";
+import classroomImg from "@/assets/slide7-classroom.png";
 
 const Slide7Reveal = () => (
-  <SlideLayout dark>
-    <div className="relative w-full h-full">
-      <img
-        src={spotlightImg}
-        alt="Spotlight on mismatched shoes"
-        className="absolute inset-0 w-full h-full object-cover opacity-60"
-      />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-black/80" />
-      <div className="relative flex flex-col justify-center h-full px-[200px]">
-        <h1 className="font-display font-bold text-[3.5rem] tracking-[-0.04em] text-balance leading-tight mb-[40px] text-slide-dark-fg">
+  <SlideLayout>
+    <div className="flex h-full">
+      {/* Left: Cartoon */}
+      <div className="w-[55%] flex items-center justify-center p-[40px]">
+        <img
+          src={classroomImg}
+          alt="Boy standing embarrassed at classroom door looking at mismatched shoes"
+          className="max-h-[950px] rounded-lg object-contain"
+          style={{ boxShadow: "0 20px 60px rgba(0,0,0,0.12)" }}
+        />
+      </div>
+      {/* Right: Text */}
+      <div className="w-[45%] flex flex-col justify-center pr-[160px] pl-[40px]">
+        <h1 className="font-display font-bold text-[3.5rem] tracking-[-0.04em] text-balance leading-tight mb-[40px]">
           The Classroom Silence
         </h1>
-        <p className="font-body text-[1.375rem] leading-relaxed text-pretty max-w-[640px] text-slide-dark-fg/90">
-          I walked in. The teacher stopped. The class looked down. Then, the laughter. 
+        <p className="font-body text-[1.375rem] leading-relaxed text-pretty max-w-[480px]">
+          I walked in. The teacher stopped. The class looked down. Then, the laughter.
           I looked down, too.
         </p>
       </div>
